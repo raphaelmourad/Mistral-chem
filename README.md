@@ -69,7 +69,7 @@ Second, in the python folder "scriptPython/", you'll find the jupyter notebook:
 
 Select the data you want to pretrain the model on 250k molecules.
 
-The script can be ran on [Google Colab](xx).
+The script can be ran on [Google Colab](https://colab.research.google.com/drive/1L2HaA5mopBr_77LNzU4-wJNjzCCPVGrL#scrollTo=W1AY86CaaAHd).
 
 # Fine-tuning the model for classification
 
