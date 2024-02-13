@@ -65,7 +65,7 @@ https://huggingface.co/RaphaelMourad/Mistral-chem-v0.1
 # Pretraining the model
 
 Second, in the python folder "scriptPython/", you'll find the jupyter notebook:
-- **script_pretrain_mistral-chem.ipynb** to pretrain Mixtral model on DNA sequences. \
+- **script_pretrain_mistral_chem.ipynb** to pretrain Mixtral model on DNA sequences. \
 
 Select the data you want to pretrain the model on 250k molecules.
 
@@ -74,7 +74,7 @@ The script can be ran on [Google Colab](xx).
 # Fine-tuning the model for classification
 
 Third, in the python folder "scriptPython/", you'll find the jupyter notebook:
-- **script_finetune.ipynb** to finetune the pretrained Mixtral model on a specific classification task. \
+- **script_finetune_mistral_chem.ipynb** to finetune the pretrained Mixtral model on a specific classification task. \
 
 To finetune the model, you must provide a dataset to train the model. 
 
