@@ -1,8 +1,8 @@
-# Mistral-DNA: Mistral large language model for DNA sequences
+# Mistral-DNA: Mistral large language model for chemical molecules
 
 # Overview
 
-Here is a repo to pretrain Mistral large language model for DNA sequences. Here the Mixtral model ([Mixtral-8x7B-v0.1](https://huggingface.co/mistralai/Mixtral-8x7B-v0.1)) was modified to significantly reduce the number of parameters mostly by removing layers, such that it could be trained on a GPU such as an RTX3090.
+Here is a repo to pretrain Mistral large language model for chemical molecules. Here the Mixtral model ([Mixtral-8x7B-v0.1](https://huggingface.co/mistralai/Mixtral-8x7B-v0.1)) was modified to significantly reduce the number of parameters mostly by removing layers, such that it could be trained on a GPU such as an RTX3090.
 
 # Requirements
 
@@ -31,8 +31,8 @@ sudo apt install python3-dev python3-pip python3-venv
 
 Make mistral-dna environment:  
 ```
-conda create -n mistral-dna python=3.8
-conda activate mistral-dna
+conda create -n mistral-chem python=3.8
+conda activate mistral-chem
 ```
 
 To install pytorch:  
@@ -53,43 +53,23 @@ pip install torch-xla>=2.0
 
 You might need to add this to your .bashrc:
 ```
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/your_path/mistral-dna/lib/
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/your_path/mistral-chem/lib/
 ```
 
 The pretrained model is available here:
 ```
-https://huggingface.co/RaphaelMourad/Mistral-DNA-v0.1
+https://huggingface.co/RaphaelMourad/Mistral-chem-v0.1
 ```
 
-To generate the data, you need to first install R packages using the following command (to type inside R):
-```
-if (!require("BiocManager", quietly = TRUE))  
-install.packages("BiocManager")  
-BiocManager::install("BSgenome.Hsapiens.UCSC.hg38")  
-BiocManager::install("GenomicRanges")
-BiocManager::install("Biostrings")
-```
-
-# Generate the data to pretrain the model
-
-If you want to pretrain the model using the whole human genome, first use the R script:
-- **scriptR/script_generate_dna_sequences.R** to generate the DNA sequences \
-
-You will obtain the following file (too large to be stored on github):
-- **data/genome_sequences/hg38/sequences_hg38_200b.csv.gz** (100% of the human genome)
-
-Alternatively, you can skip this step and use smaller files stored on github:
-- **data/genome_sequences/hg38/sequences_hg38_200b_small.csv.gz** (10% of the human genome)
-- **data/genome_sequences/hg38/sequences_hg38_200b_verysmall.csv.gz** (1% of the human genome)
 
 # Pretraining the model
 
 Second, in the python folder "scriptPython/", you'll find the jupyter notebook:
-- **script_pretrain_mistral-dna.ipynb** to pretrain Mixtral model on DNA sequences. \
+- **script_pretrain_mistral-chem.ipynb** to pretrain Mixtral model on DNA sequences. \
 
-Select the data you want to pretrain the model on (full data, small data and very small data).
+Select the data you want to pretrain the model on 250k molecules.
 
-The script can be ran on [Google Colab](https://colab.research.google.com/drive/1gcw_MYiqwB-pbVYHIx8kevx-ZD7sqMxL#scrollTo=JTYKjBrwRSU6).
+The script can be ran on [Google Colab](xx).
 
 # Fine-tuning the model for classification
 
@@ -97,10 +77,8 @@ Third, in the python folder "scriptPython/", you'll find the jupyter notebook:
 - **script_finetune.ipynb** to finetune the pretrained Mixtral model on a specific classification task. \
 
 To finetune the model, you must provide a dataset to train the model. 
-In the notebook, we used the [GUE dataset](https://drive.google.com/file/d/1GRtbzTe3UXYF1oW27ASNhYX3SZ16D7N2/view). 
-The folder GUE should be put in the folder 'data'. 
 
-The script can be ran on [Google Colab](https://colab.research.google.com/drive/19AQsrmiCnEfvgHKz7HQ27-vFsHQogrya).
+The script can be ran on [Google Colab](xx).
 
 # Contact: 
 raphael.mourad@univ-tlse3.fr
