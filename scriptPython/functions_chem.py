@@ -15,8 +15,6 @@ import random
 from torch.utils.data import Dataset
 from sklearn.metrics import roc_auc_score, precision_recall_curve, average_precision_score, f1_score, matthews_corrcoef
 import pandas as pd
-import pyfaidx
-from kipoiseq import Interval
 from progressbar import ProgressBar
 
 @dataclass
