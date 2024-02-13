@@ -78,7 +78,7 @@ Third, in the python folder "scriptPython/", you'll find the jupyter notebook:
 
 To finetune the model, you must provide a dataset to train the model. 
 
-The script can be ran on [Google Colab](xx).
+The script can be ran on [Google Colab](https://colab.research.google.com/drive/1XJ7q1CLqmVUldzLIvEVshGU4oFHU_A_W#scrollTo=ID9BUyZ0qE_y).
 
 # Contact: 
 raphael.mourad@univ-tlse3.fr
