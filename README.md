@@ -48,7 +48,7 @@ pip install accelerate>=0.21.0
 pip install bitsandbytes>=0.37.0
 pip install progressbar
 pip install tensorboard
-pip install torch-xla>=2.0
+pip install torch-xla==2.2.0
 ```
 
 You might need to add this to your .bashrc:
