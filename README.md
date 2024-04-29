@@ -37,7 +37,7 @@ conda activate mistral-chem
 
 To install pytorch:  
 ```
-pip install torch>=1.13.0
+pip install torch==2.2.1
 ```
 
 Other python packages need to be installed:   
