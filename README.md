@@ -42,10 +42,10 @@ pip install torch==2.2.1
 
 Other python packages need to be installed:   
 ```
-pip install transformers==4.37.2 numpy>=1.24.4 pandas>=1.4.4 sklearn==0.0 datasets>=2.14.4 peft>=0.7.2.dev0
-pip install flash-attn==0.2.4
-pip install accelerate>=0.21.0
-pip install bitsandbytes>=0.37.0
+pip install transformers==4.37.2 numpy>=1.24.4 pandas>=1.4.4 sklearn==0.0 datasets>=2.14.4 peft==0.8.2
+pip install flash-attn==2.5.3
+pip install accelerate==0.27.0
+pip install bitsandbytes==0.42.0
 pip install progressbar
 pip install tensorboard
 pip install torch-xla==2.2.0
