@@ -58,7 +58,7 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/your_path/mistral-chem/lib/
 
 The pretrained model is available here:
 ```
-https://huggingface.co/RaphaelMourad/Mistral-chem-v0.1
+https://huggingface.co/RaphaelMourad/Mistral-chem-v0.4
 ```
 
 
